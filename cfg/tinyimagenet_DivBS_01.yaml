@@ -1,0 +1,37 @@
+output_dir: null
+
+method: Linear_ahead21
+method_opt:
+  epoch_selection: False
+  iter_selection: True
+  num_epochs_per_selection: 1
+  ratio: 0.1
+  balance: False
+  ratio_scheduler: constant
+  reduce_dim: 4
+
+dataset:
+  name: TinyImageNet
+  root: ./_TINYIMAGENET
+
+networks:
+  type: ResNet
+  params: 
+    m_type: 'resnet18'
+    num_classes: 200
+    pretrained: False
+
+training_opt:
+  num_epochs: 100
+  num_steps: 300000000
+  num_data_workers: 4
+  batch_size: 320
+  test_batch_size: 512
+  loss_type: CrossEntropy
+  loss_params: {}
+  optimizer: SGD
+  optim_params: {lr: 0.2, momentum: 0.9, weight_decay: 0.0001}
+  scheduler: 'cosine'
+  scheduler_params: {endlr: 0.02, gamma: 0.1, step_size: 35, milestones: [120, 160]}
+logger_opt:
+  print_iter: 100

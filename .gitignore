@@ -1,0 +1,25 @@
+# python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# data
+*.tar.gz
+*cifar-100-python/
+*cifar-10-batches-py/
+_CIFAR/
+_TINYIMAGENET/
+_CIFAR_N/
+
+# exp
+exp/
+exp_before0804/
+
+# wandb
+wandb/
+
+# vscode
+.vscode/
+
+
+*.ipynb
