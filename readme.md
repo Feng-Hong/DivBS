@@ -1,7 +1,7 @@
 <!-- # Long-Tailed Partial Label Learning via Dynamic Rebalancing -->
 <h1 align="center">Diversified Batch Selection for Training Acceleration</h1>
 
-by Feng Hong, Feng Hong, Yueming Lyu, Jiangchao Yao, Ya Zhang, Ivor W. Tsang, and Yanfeng Wang at SJTU, A*STAR, Shanghai AI Lab, and NTU.
+by Feng Hong, Yueming Lyu, Jiangchao Yao, Ya Zhang, Ivor W. Tsang, and Yanfeng Wang at SJTU, A*STAR, Shanghai AI Lab, and NTU.
 
 International Conference on Machine Learning (ICML), 2024.
 
