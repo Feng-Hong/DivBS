@@ -1,0 +1,8 @@
+numpy==1.21.2
+Pillow==8.4.0
+PyYAML==6.0
+Requests==2.31.0
+torch==1.13.1
+torchvision
+tqdm==4.62.3
+wandb==0.14.0

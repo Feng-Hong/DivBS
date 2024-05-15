@@ -9,7 +9,15 @@ This repository is the official Pytorch implementation of DivBS.
 
 ⚠️ This repository is currently in its initial version. It is being organized and updated continuously. Please note that this version is not the final release.
 
-## Running the code
+## Environment
+Create the environment for running our code:
+```bash
+conda create --name DivBS python=3.7.10
+conda activate DivBS
+pip install -r requirements.txt
+```
+
+## Running
 ```bash
 CUDA_VISIBLE_DEVICES=0 python main.py --cfg cfg/cifar10_DivBS_01.yaml --seed 0 --wandb_not_upload 
 ```
