@@ -20,12 +20,6 @@ class DivBS(SelectionMethod):
         self.warmup_epochs = config['method_opt']['warmup_epochs'] if 'warmup_epochs' in config['method_opt'] else 0
 
         self.current_train_indices = np.arange(self.num_train_samples)
-        # self.auxiliary_linear: same as fc of self.model
-        self.auxiliary_linear = copy.deepcopy(self.model.module.fc) if hasattr(self.model, 'module') else copy.deepcopy(self.model.fc)
-        self.auxiliary_optimizer = copy.deepcopy(self.optimizer)
-        # change optimizer's param_groups to auxiliary_linear's param
-        self.auxiliary_optimizer.param_groups = []
-        self.auxiliary_optimizer.add_param_group({'params': self.auxiliary_linear.parameters()})
         self.reduce_dim = config['method_opt']['reduce_dim'] if 'reduce_dim' in config['method_opt'] else False
         
     def get_ratio_per_epoch(self, epoch):
