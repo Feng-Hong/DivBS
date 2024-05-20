@@ -1,6 +1,6 @@
 output_dir: null
 
-method: Linear_ahead21
+method: DivBS
 method_opt:
   epoch_selection: False
   iter_selection: True
