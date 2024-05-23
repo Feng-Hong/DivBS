@@ -33,7 +33,7 @@ training_opt:
   optimizer: SGD
   optim_params: {lr: 0.2, momentum: 0.9, weight_decay: 0.0001}
   scheduler: 'cosine'
-  scheduler_params: {endlr: 0.05, gamma: 0.1, step_size: 35, milestones: [120, 160]}
+  scheduler_params: {endlr: 0.02, gamma: 0.1, step_size: 35, milestones: [120, 160]}
 logger_opt:
   print_iter: 100
 
