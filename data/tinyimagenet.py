@@ -20,25 +20,26 @@ class wrapped_dataset(torch.utils.data.Dataset):
 
 def TinyImageNet(config, logger):
     if not os.path.exists(os.path.join(config['dataset']['root'], "tiny-imagenet-200")):
-        url = "http://cs231n.stanford.edu/tiny-imagenet-200.zip"  # 248MB
-        logger.info("Downloading Tiny-ImageNet")
-        r = requests.get(url, stream=True)
-        file_size = int(r.headers.get('Content-Length', 0))
-        progress_bar = tqdm(total=file_size, unit='iB', unit_scale=True)
+        # url = "http://cs231n.stanford.edu/tiny-imagenet-200.zip"  # 248MB
+        # logger.info("Downloading Tiny-ImageNet")
+        # r = requests.get(url, stream=True)
+        # file_size = int(r.headers.get('Content-Length', 0))
+        # progress_bar = tqdm(total=file_size, unit='iB', unit_scale=True)
 
-        with open(os.path.join(config['dataset']['root'], "tiny-imagenet-200.zip"), 'wb') as file:
-            for chunk in r.iter_content(chunk_size=1024):
-                file.write(chunk)
-                progress_bar.update(len(chunk))
-        # with open(os.path.join(config['dataset']['root'], "tiny-imagenet-200.zip"), "wb") as f:
+        # with open(os.path.join(config['dataset']['root'], "tiny-imagenet-200.zip"), 'wb') as file:
         #     for chunk in r.iter_content(chunk_size=1024):
-        #         if chunk:
-        #             f.write(chunk)
+        #         file.write(chunk)
+        #         progress_bar.update(len(chunk))
+        # # with open(os.path.join(config['dataset']['root'], "tiny-imagenet-200.zip"), "wb") as f:
+        # #     for chunk in r.iter_content(chunk_size=1024):
+        # #         if chunk:
+        # #             f.write(chunk)
 
-        logger.info("Unzipping Tiny-ImageNet")
-        with zipfile.ZipFile(os.path.join(config['dataset']['root'], "tiny-imagenet-200.zip"), 'r') as zip_ref:
-            zip_ref.extractall(config['dataset']['root'])
-        logger.info("getting Tiny-ImageNet done")
+        # logger.info("Unzipping Tiny-ImageNet")
+        # with zipfile.ZipFile(os.path.join(config['dataset']['root'], "tiny-imagenet-200.zip"), 'r') as zip_ref:
+        #     zip_ref.extractall(config['dataset']['root'])
+        # logger.info("getting Tiny-ImageNet done")
+        raise ValueError("Dataset not found")
 
     im_size = (32, 32) if 'downsize' in config['dataset'] and config['dataset']['downsize'] else (64, 64)
     num_classes = 200

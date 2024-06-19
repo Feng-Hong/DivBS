@@ -8,7 +8,7 @@ __pycache__/
 *cifar-100-python/
 *cifar-10-batches-py/
 _CIFAR/
-_TINYIMAGENET/
+# _TINYIMAGENET/
 _CIFAR_N/
 
 # exp

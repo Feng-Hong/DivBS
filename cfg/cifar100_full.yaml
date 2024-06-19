@@ -1,6 +1,6 @@
 output_dir: null
 
-method: Uniform
+method: Full
 method_opt:
   # epoch_selection: True
   iter_selection: True

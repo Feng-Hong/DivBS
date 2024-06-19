@@ -69,9 +69,7 @@ class DivBS(SelectionMethod):
         # print(grad.shape)
         residual = grad_mean.unsqueeze(-1) if grad_mean.dim() == 1 else grad_mean
         index_selected = []
-        # coef = torch.zeros(grad.shape[0]).cuda()
         D = grad.t()
-        # idx_remain = torch.ones(grad.shape[0], dtype=torch.bool)
         selected_element = []
         for i in range(number_to_select):
             correlations = torch.abs(torch.matmul(D.t(), residual))
