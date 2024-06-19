@@ -3,7 +3,7 @@
 <p align="center">
     <a href="https://arxiv.org/abs/2406.04872"><img src="https://img.shields.io/badge/arXiv-2406.04872-b31b1b.svg" alt="Paper"></a>
     <a href="https://openreview.net/pdf?id=5QWKec0eDF"><img src="https://img.shields.io/badge/OpenReview-ICML'24-blue" alt="Paper"></a>
-    <a href="https://github.com/Feng-Hong/DivBS"><img src="https://img.shields.io/badge/Github-RECORDS-brightgreen?logo=github" alt="Github"></a>
+    <a href="https://github.com/Feng-Hong/DivBS"><img src="https://img.shields.io/badge/Github-DiVBS-brightgreen?logo=github" alt="Github"></a>
     <!-- <a href="https://iclr.cc/media/iclr-2023/Slides/11305.pdf"> <img src="https://img.shields.io/badge/Slides (5 min)-grey?&logo=MicrosoftPowerPoint&logoColor=white" alt="Slides"></a> -->
     <!-- <a href="https://iclr.cc/media/PosterPDFs/ICLR%202023/11305.png?t=1680238646.843235"> <img src="https://img.shields.io/badge/Poster-grey?logo=airplayvideo&logoColor=white" alt="Poster"></a> -->
 </p>
