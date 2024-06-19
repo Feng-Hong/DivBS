@@ -1,7 +1,7 @@
 from .SelectionMethod import SelectionMethod
 import torch
 import numpy as np
-import copy
+# import copy
 
 class DivBS(SelectionMethod):
     method_name = 'DivBS'
@@ -13,7 +13,6 @@ class DivBS(SelectionMethod):
         assert (self.iter_selection and not self.epoch_selection) or (not self.iter_selection and self.epoch_selection), 'there should be one and only one True in iter_selection and epoch_selection'
 
         self.num_epochs_per_selection = config['method_opt']['num_epochs_per_selection'] if 'num_epochs_per_selection' in config['method_opt'] else 1
-        # self.num_iters_per_selection = config['method_opt']['num_iters_per_selection'] if 'num_iters_per_selection' in config['method_opt'] else 1
 
         self.ratio = config['method_opt']['ratio']
         self.ratio_scheduler = config['method_opt']['ratio_scheduler'] if 'ratio_scheduler' in config['method_opt'] else 'constant'

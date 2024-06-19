@@ -58,8 +58,6 @@ def main():
         config['log_file'] = args.log_file
     
     if args.output_dir is None:
-        #TODO: name output_dir
-        # pass
         args.output_dir = './exp/'
         # dataset
         args.output_dir = os.path.join(args.output_dir, config['dataset']['name'])

@@ -1,9 +1,9 @@
 from torchvision import datasets, transforms
 import torch
 import os
-import requests
-import zipfile
-from tqdm import tqdm
+# import requests
+# import zipfile
+# from tqdm import tqdm
 
 class wrapped_dataset(torch.utils.data.Dataset):
     def __init__(self, dataset):
@@ -71,25 +71,4 @@ def TinyImageNet(config, logger):
     }
 
 
-if __name__ == '__main__':
-    config = {
-        'dataset': {
-            'name': 'TinyImageNet',
-            'root': '/remote-home/fenghong/workspace/EfficientSelection/_TINYIMAGENET'
-        },
-        'training_opt': {
-        'batch_size': 128,
-        'num_epochs': 200,
-        'num_data_workers': 4,
-        'test_batch_size': 100
-        },
-            
-        }
-    class logger:
-        info = print
-    
-    data = TinyImageNet(config,logger)
-    print(data['num_classes'])
-    print(data['num_train_samples'])
-    
     
